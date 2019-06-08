@@ -1,13 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
-const cors = require("cors");
 
 const db = require("../dbConfig.js");
 
 const server = express();
-
-server.use(cors());
 
 router.post("/register", (req, res) => {
   let user = req.body;
