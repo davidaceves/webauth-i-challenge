@@ -3,12 +3,12 @@ const server = express();
 const helmet = require("helmet");
 const cors = require("cors");
 
-const UserRouter = require("./data/user/userRouter.js");
+const UsersRouter = require("./data/user/usersRouter.js");
 
 server.use(express.json());
 server.use(helmet());
 server.use(cors());
 
-server.use("/api/users", UserRouter);
+server.use("/api", UsersRouter);
 
 module.exports = server;
